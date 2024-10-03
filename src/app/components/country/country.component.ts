@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './country.component.css'
 })
 export class CountryComponent {
-  countryList: string[] = ["United States", "Canada", "Mexico"];
+  countryLis: string[] = ["Japan", "Brazil", "South Africa"];
   item: string = '';
 
   addItems() {
-    this.countryList.push(this.item);
+    this.countryLis.push(this.item);
   }
 
   deleteCountry(index: number) {
-    this.countryList.splice(index, 1);
+    this.countryLis.splice(index, 1);
   }
 }
