@@ -2,7 +2,7 @@
 <input type="text" [(ngModel)]="item"/>
 <button class="btn btn-primary" (click)="addItems()">Add Sport</button>
 <ul>
-  <li *ngFor="let sport of sportsList; let i = index">
+  <li *ngFor="let sport of sportsLis; let i = index">
     {{sport}}
     <button class="btn btn-danger" (click)="deleteSport(i)">Delete</button>
   </li>

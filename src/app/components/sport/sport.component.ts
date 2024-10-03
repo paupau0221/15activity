@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './sport.component.css'
 })
 export class SportComponent {
-  sportsList: string[] = ["Soccer", "Basketball", "Tennis"];
+  sportsLis: string[] = ["Soccer", "Basketball", "Tennis"];
   item: string = '';
 
   addItems() {
-    this.sportsList.push(this.item);
+    this.sportsLis.push(this.item);
   }
 
   deleteSport(index: number) {
-    this.sportsList.splice(index, 1);
+    this.sportsLis.splice(index, 1);
   }
 }
