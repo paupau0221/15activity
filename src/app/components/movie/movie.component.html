@@ -2,7 +2,7 @@
 <input type="text" [(ngModel)]="item"/>
 <button class="btn btn-primary" (click)="addItems()">Add Movie</button>
 <ul>
-  <li *ngFor="let movie of movieList; let i = index">
+  <li *ngFor="let movie of movieLis; let i = index">
     {{movie}}
     <button class="btn btn-danger" (click)="deleteMovie(i)">Delete</button>
   </li>
