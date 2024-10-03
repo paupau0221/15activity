@@ -9,22 +9,22 @@ interface Flower {
   styleUrl: './flower.component.css'
 })
 export class FlowerComponent {
-  flowerList: Flower[] = [
-    { name: "Roses", quantity: 50 },
-    { name: "Lilies", quantity: 20 },
-    { name: "Hydrangeas", quantity: 15 }
+  flowerLis: Flower[] = [
+    { name: "Rose", quantity: 60 },
+    { name: "Lily", quantity: 30 },
+    { name: "Tulip", quantity: 25 }
   ];
   newFlower: string = '';
   newQuantity: number = 0;
 
   addFlower() {
     const newFlower: Flower = { name: this.newFlower, quantity: this.newQuantity };
-    this.flowerList.push(newFlower);
+    this.flowerLis.push(newFlower);
     this.newFlower = '';
     this.newQuantity = 0;
   }
 
   deleteFlower(index: number) {
-    this.flowerList.splice(index, 1);
+    this.flowerLis.splice(index, 1);
   }
 }
