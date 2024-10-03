@@ -2,7 +2,7 @@
 <input type="text" [(ngModel)]="item"/>
 <button class="btn btn-primary" (click)="addItems()">Add Language</button>
 <ul>
-  <li *ngFor="let language of languageList; let i = index">
+  <li *ngFor="let language of languageLis; let i = index">
     {{language}}
     <button class="btn btn-danger" (click)="deleteLanguage(i)">Delete</button>
   </li>

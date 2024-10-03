@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './laguage.component.css'
 })
 export class LaguageComponent {
-  languageList: string[] = ["English", "Spanish", "French"];
+  languageLis: string[] = ["English", "Spanish", "Mandarin Chinese"];
   item: string = '';
 
   addItems() {
-    this.languageList.push(this.item);
+    this.languageLis.push(this.item);
   }
 
   deleteLanguage(index: number) {
-    this.languageList.splice(index, 1);
+    this.languageLis.splice(index, 1);
   }
 }
