@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './car.component.css'
 })
 export class CarComponent {
-  carModelList: string[] = ["Toyota Camry", "Honda Civic", "Ford Mustang"];
+  carModelLis: string[] = ["AeroGlide", "Urban Nomad", "EcoCruiser"];
   item: string = '';
 
   addItems() {
-    this.carModelList.push(this.item);
+    this.carModelLis.push(this.item);
   }
 
   deleteCarModel(index: number) {
-    this.carModelList.splice(index, 1);
+    this.carModelLis.splice(index, 1);
   }
 }
