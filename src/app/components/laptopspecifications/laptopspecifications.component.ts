@@ -14,7 +14,7 @@ interface LaptopSpec {
   styleUrl: './laptopspecifications.component.css'
 })
 export class LaptopspecificationsComponent {
-  laptopSpecsList: LaptopSpec[] = [
+  laptopSpecsLis: LaptopSpec[] = [
     { model: "MacBook Pro 16", processor: "Apple M2 Pro", ram: 16, storage: 512, screenSize: 16.2 },
     { model: "Dell XPS 13", processor: "Intel Core i7-1360P", ram: 16, storage: 512, screenSize: 13.4 },
     { model: "Lenovo ThinkPad X1 Carbon", processor: "Intel Core i7-1360P", ram: 16, storage: 512, screenSize: 14 }
@@ -33,7 +33,7 @@ export class LaptopspecificationsComponent {
       storage: this.newStorage,
       screenSize: this.newScreenSize
     };
-    this.laptopSpecsList.push(newLaptop);
+    this.laptopSpecsLis.push(newLaptop);
     this.newModel = '';
     this.newProcessor = '';
     this.newRam = 0;
@@ -42,6 +42,6 @@ export class LaptopspecificationsComponent {
   }
 
   deleteLaptop(index: number) {
-    this.laptopSpecsList.splice(index, 1);
+    this.laptopSpecsLis.splice(index, 1);
   }
 }
