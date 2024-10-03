@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './book.component.css'
 })
 export class BookComponent {
-  bookList: string[] = ["The Lord of the Rings", "Pride and Prejudice", "To Kill a Mockingbird"];
+  bookLis: string[] = ["Bayan ng Sining", "Tides of Change: Chronicles of the Archipelago", "Whispers of the Mangroves"];
   item: string = '';
 
   addItems() {
-    this.bookList.push(this.item);
+    this.bookLis.push(this.item);
   }
 
   deleteBook(index: number) {
-    this.bookList.splice(index, 1);
+    this.bookLis.splice(index, 1);
   }
 }
