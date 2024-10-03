@@ -8,21 +8,21 @@ interface Laptop {
   styleUrl: './laptop.component.css'
 })
 export class LaptopComponent {
-  laptopList: Laptop[] = [
-    { model: "MacBook Pro 16" },
+  laptopLis: Laptop[] = [
+    { model: "Apple MacBook Air" },
     { model: "Dell XPS 13" },
-    { model: "Lenovo ThinkPad X1 Carbon" }
+    { model: "ASUS ROG Zephyrus G14" }
   ];
   newLaptop: string = '';
 
   addLaptop() {
     const newLaptop: Laptop = { model: this.newLaptop };
-    this.laptopList.push(newLaptop);
+    this.laptopLis.push(newLaptop);
     this.newLaptop = '';
   }
 
   deleteLaptop(index: number) {
-    this.laptopList.splice(index, 1);
+    this.laptopLis.splice(index, 1);
   }
 
 }

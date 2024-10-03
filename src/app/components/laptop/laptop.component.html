@@ -11,7 +11,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let laptop of laptopList; let i = index">
+  <tr *ngFor="let laptop of laptopLis; let i = index">
     <td>{{laptop.model}}</td>
     <td>
       <button class="btn btn-danger" (click)="deleteLaptop(i)">Delete</button>
