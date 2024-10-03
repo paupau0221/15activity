@@ -9,8 +9,7 @@ interface Framework {
   styleUrl: './framework.component.css'
 })
 export class FrameworkComponent {
-  frameworkList: Framework[] = [
-    { name: "Angular", type: "Front-End" },
+  frameworkLis: Framework[] = [
     { name: "React", type: "Front-End" },
     { name: "Vue.js", type: "Front-End" },
     { name: "Express.js", type: "Back-End" },
@@ -22,12 +21,12 @@ export class FrameworkComponent {
 
   addFramework() {
     const newFramework: Framework = { name: this.newFramework, type: this.newType };
-    this.frameworkList.push(newFramework);
+    this.frameworkLis.push(newFramework);
     this.newFramework = '';
     this.newType = '';
   }
 
   deleteFramework(index: number) {
-    this.frameworkList.splice(index, 1);
+    this.frameworkLis.splice(index, 1);
   }
 }
