@@ -11,7 +11,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let topic of topicList; let i = index">
+  <tr *ngFor="let topic of topicLis; let i = index">
     <td>{{topic.name}}</td>
     <td>
       <button class="btn btn-danger" (click)="deleteTopic(i)">Delete</button>

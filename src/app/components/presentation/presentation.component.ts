@@ -9,20 +9,20 @@ interface PresentationTopic {
   styleUrl: './presentation.component.css'
 })
 export class PresentationComponent {
-  topicList: PresentationTopic[] = [
-    { name: "The Future of Artificial Intelligence" },
-    { name: "Sustainable Living Practices" },
+  topicLis: PresentationTopic[] = [
+    { name: "Harnessing Innovation: Transforming Ideas into Impact" },
+    { name: "The Science of Happiness: Unlocking the Secrets to Well-Being" },
     { name: "The History of Music" }
   ];
   newTopic: string = '';
 
   addTopic() {
     const newTopic: PresentationTopic = { name: this.newTopic };
-    this.topicList.push(newTopic);
+    this.topicLis.push(newTopic);
     this.newTopic = '';
   }
 
   deleteTopic(index: number) {
-    this.topicList.splice(index, 1);
+    this.topicLis.splice(index, 1);
   }
 }
