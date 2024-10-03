@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './game.component.css'
 })
 export class GameComponent {
-  gameList: string[] = ["Mario Kart", "Minecraft", "Fortnite"];
+  gameLis: string[] = ["Mobile Legends", "Minecraft", "Candy Crush"];
   item: string = '';
 
   addItems() {
-    this.gameList.push(this.item);
+    this.gameLis.push(this.item);
   }
 
   deleteGame(index: number) {
-    this.gameList.splice(index, 1);
+    this.gameLis.splice(index, 1);
   }
 }
