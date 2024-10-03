@@ -8,19 +8,19 @@ interface Artist {
   styleUrl: './artist.component.css'
 })
 export class ArtistComponent {
-  artistList: Artist[] = [
-    { name: "Leonardo da Vinci" },
-    { name: "Vincent van Gogh" }
+  artistLis: Artist[] = [
+    { name: "Luna Skye" },
+    { name: "Jaxon Wilde" }
   ];
   newArtist: string = '';
 
   addArtist() {
     const newArtist: Artist = { name: this.newArtist };
-    this.artistList.push(newArtist);
+    this.artistLis.push(newArtist);
     this.newArtist = '';
   }
 
   deleteArtist(index: number) {
-    this.artistList.splice(index, 1);
+    this.artistLis.splice(index, 1);
   }
 }
