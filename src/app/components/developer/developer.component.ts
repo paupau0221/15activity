@@ -9,8 +9,7 @@ interface DevTool {
   styleUrl: './developer.component.css'
 })
 export class DeveloperComponent {
-  devToolsList: DevTool[] = [
-    { name: "Visual Studio Code", category: "Code Editor" },
+  devToolsLis: DevTool[] = [
     { name: "Git", category: "Version Control" },
     { name: "Postman", category: "API Testing" }
   ];
@@ -19,12 +18,12 @@ export class DeveloperComponent {
 
   addTool() {
     const newTool: DevTool = { name: this.newTool, category: this.newCategory };
-    this.devToolsList.push(newTool);
+    this.devToolsLis.push(newTool);
     this.newTool = '';
     this.newCategory = '';
   }
 
   deleteTool(index: number) {
-    this.devToolsList.splice(index, 1);
+    this.devToolsLis.splice(index, 1);
   }
 }
