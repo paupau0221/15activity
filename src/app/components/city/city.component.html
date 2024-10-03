@@ -2,7 +2,7 @@
 <input type="text" [(ngModel)]="item"/>
 <button class="btn btn-primary" (click)="addItems()">Add City</button>
 <ul>
-  <li *ngFor="let city of cityList; let i = index">
+  <li *ngFor="let city of cityLis; let i = index">
     {{city}}
     <button class="btn btn-danger" (click)="deleteCity(i)">Delete</button>
   </li>

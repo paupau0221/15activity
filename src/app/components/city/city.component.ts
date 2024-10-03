@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './city.component.css'
 })
 export class CityComponent {
-  cityList: string[] = ["London", "Paris", "New York"];
+  cityLis: string[] = ["Solara Bay", "Nebula Heights", "Verdant Grove"];
   item: string = '';
 
   addItems() {
-    this.cityList.push(this.item);
+    this.cityLis.push(this.item);
   }
 
   deleteCity(index: number) {
-    this.cityList.splice(index, 1);
+    this.cityLis.splice(index, 1);
   }
 }
