@@ -9,9 +9,9 @@ interface Building {
 })
 export class BuildingComponent {
   buildingList: Building[] = [
-    { name: "Main Building" },
-    { name: "Library" },
-    { name: "Science Hall" }
+    { name: "Skyview Plaza" },
+    { name: "Harmony Hall" },
+    { name: "Echo Bridge" }
   ];
   newBuilding: string = '';
 
