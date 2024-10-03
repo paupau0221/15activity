@@ -9,20 +9,20 @@ interface PodcastEpisode {
   styleUrl: './podcast.component.css'
 })
 export class PodcastComponent {
-  episodeList: PodcastEpisode[] = [
-    { title: "Episode 1: The Introduction" },
-    { title: "Episode 2: The Big Reveal" },
-    { title: "Episode 3: The Twist" }
+  episodeLis: PodcastEpisode[] = [
+    { title: "The Joe Rogan Experience" },
+    { title: "Serial" },
+    { title: "How I Built This" }
   ];
   newEpisodeTitle: string = '';
 
   addEpisode() {
     const newEpisode: PodcastEpisode = { title: this.newEpisodeTitle };
-    this.episodeList.push(newEpisode);
+    this.episodeLis.push(newEpisode);
     this.newEpisodeTitle = '';
   }
 
   deleteEpisode(index: number) {
-    this.episodeList.splice(index, 1);
+    this.episodeLis.splice(index, 1);
   }
 }
