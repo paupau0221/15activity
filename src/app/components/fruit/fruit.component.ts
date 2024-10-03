@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './fruit.component.css'
 })
 export class FruitComponent {
-  fruitList: string[] = ["Apple", "Banana", "Orange"];
+  fruitLis: string[] = ["Mango", "Blueberry", "Pineapple"];
   item: string = '';
 
   addItems() {
-    this.fruitList.push(this.item);
+    this.fruitLis.push(this.item);
   }
 
   deleteFruit(index: number) {
-    this.fruitList.splice(index, 1);
+    this.fruitLis.splice(index, 1);
   }
 }
