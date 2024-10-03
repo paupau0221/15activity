@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './animal.component.css'
 })
 export class AnimalComponent {
-  animalList: string[] = ["Dog", "Cat", "Elephant"];
+  animalLis: string[] = ["Cat", "Dog", "Snake"];
   item: string = '';
 
   addItems() {
-    this.animalList.push(this.item);
+    this.animalLis.push(this.item);
   }
 
   deleteAnimal(index: number) {
-    this.animalList.splice(index, 1);
+    this.animalLis.splice(index, 1);
   }
 }
