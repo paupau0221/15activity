@@ -1,1 +1,9 @@
-<p>software works!</p>
+<p>Game List works!</p>
+<input type="text" [(ngModel)]="item"/>
+<button class="btn btn-primary" (click)="addItems()">Add Game</button>
+<ul>
+  <li *ngFor="let game of softwar; let i = index">
+    {{game}}
+    <button class="btn btn-danger" (click)="deleteGame(i)">Delete</button>
+  </li>
+</ul>
