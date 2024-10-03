@@ -3,7 +3,7 @@
 <button class="btn btn-primary" (click)="addStudent()">Add Student</button>
 
 <ul>
-  <li *ngFor="let student of studentList; let i = index">
+  <li *ngFor="let student of studentLis; let i = index">
     {{student}}
     <button class="btn btn-danger" (click)="deleteStudent(i)">Delete</button>
   </li>

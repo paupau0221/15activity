@@ -6,15 +6,15 @@ import { Component } from '@angular/core';
   styleUrl: './classroom.component.css'
 })
 export class ClassroomComponent {
-  studentList: string[] = ["Alice", "Bob", "Charlie", "David"];
+  studentLis: string[] = ["Teresita", "Minda", "Enrico", "April"];
   newStudent: string = '';
 
   addStudent() {
-    this.studentList.push(this.newStudent);
+    this.studentLis.push(this.newStudent);
     this.newStudent = ''; // Clear the input field
   }
 
   deleteStudent(index: number) {
-    this.studentList.splice(index, 1);
+    this.studentLis.splice(index, 1);
   }
 }
