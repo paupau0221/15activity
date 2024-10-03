@@ -9,7 +9,7 @@ interface Lecture {
   styleUrl: './lecture.component.css'
 })
 export class LectureComponent {
-  lectureList: Lecture[] = [
+  lectureLis: Lecture[] = [
     { topic: "Introduction to Programming", date: new Date('2024-01-15') },
     { topic: "Data Structures", date: new Date('2024-01-22') }
   ];
@@ -17,11 +17,11 @@ export class LectureComponent {
 
   addLecture() {
     const newLecture: Lecture = { topic: this.newLecture, date: new Date() };
-    this.lectureList.push(newLecture);
+    this.lectureLis.push(newLecture);
     this.newLecture = '';
   }
 
   deleteLecture(index: number) {
-    this.lectureList.splice(index, 1);
+    this.lectureLis.splice(index, 1);
   }
 }
