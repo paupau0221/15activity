@@ -7,15 +7,15 @@ import {FormsModule} from "@angular/forms";
   styleUrl: './grocery.component.css'
 })
 export class GroceryComponent {
-  groceryList: string[] = ["Milk", "Eggs", "Bread", "Cheese"];
+  groceryLis: string[] = ["Tissue", "Shampoo", "Soap", "Bread"];
   newItem: string = '';
 
   addItem() {
-    this.groceryList.push(this.newItem);
+    this.groceryLis.push(this.newItem);
     this.newItem = ''; // Clear the input field
   }
 
   deleteItem(index: number) {
-    this.groceryList.splice(index, 1);
+    this.groceryLis.splice(index, 1);
   }
 }

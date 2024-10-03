@@ -3,7 +3,7 @@
 <button class="btn btn-primary" (click)="addItem()">Add Item</button>
 
 <ul>
-  <li *ngFor="let item of groceryList; let i = index">
+  <li *ngFor="let item of groceryLis; let i = index">
     {{item}}
     <button class="btn btn-danger" (click)="deleteItem(i)">Delete</button>
   </li>
