@@ -9,26 +9,26 @@ interface BudgetItem {
   styleUrl: './budget.component.css'
 })
 export class BudgetComponent {
-  budgetItems: BudgetItem[] = [
-    { name: "Software", cost: 500 },
-    { name: "Hardware", cost: 1000 },
-    { name: "Marketing", cost: 200 }
+  budgetItem: BudgetItem[] = [
+    { name: "Software", cost: 600 },
+    { name: "Hardware", cost: 1200 },
+    { name: "Marketing", cost: 500 }
   ];
   newItem: string = '';
   newCost: number = 0;
 
   addItem() {
     const newItem: BudgetItem = { name: this.newItem, cost: this.newCost };
-    this.budgetItems.push(newItem);
+    this.budgetItem.push(newItem);
     this.newItem = '';
     this.newCost = 0;
   }
 
   deleteItem(index: number) {
-    this.budgetItems.splice(index, 1);
+    this.budgetItem.splice(index, 1);
   }
 
   getTotalCost(): number {
-    return this.budgetItems.reduce((total, item) => total + item.cost, 0);
+    return this.budgetItem.reduce((total, item) => total + item.cost, 0);
   }
 }
