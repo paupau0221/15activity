@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './subject.component.css'
 })
 export class SubjectComponent {
-  subjectList: string[] = ["Mathematics", "English", "Science"];
+  subjectLis: string[] = ["Math", "English", "Science"];
   item: string = '';
 
   addItems() {
-    this.subjectList.push(this.item);
+    this.subjectLis.push(this.item);
   }
 
   deleteSubject(index: number) {
-    this.subjectList.splice(index, 1);
+    this.subjectLis.splice(index, 1);
   }
 }
