@@ -1,0 +1,29 @@
+<p>Laptop Specifications List works!</p>
+
+<input type="text" [(ngModel)]="newModel" placeholder="Enter laptop model">
+<button class="btn btn-primary" (click)="addLaptop()">Add Laptop</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Model</th>
+    <th>Processor</th>
+    <th>RAM</th>
+    <th>Storage</th>
+    <th>Screen Size</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let laptop of laptopSpecsList; let i = index">
+    <td>{{laptop.model}}</td>
+    <td>{{laptop.processor}}</td>
+    <td>{{laptop.ram}} GB</td>
+    <td>{{laptop.storage}} GB</td>
+    <td>{{laptop.screenSize}} inches</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteLaptop(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

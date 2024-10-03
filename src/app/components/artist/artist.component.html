@@ -1,0 +1,21 @@
+<p>Artist List works!</p>
+
+<input type="text" [(ngModel)]="newArtist" placeholder="Enter artist name">
+<button class="btn btn-primary" (click)="addArtist()">Add Artist</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Artist Name</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let artist of artistList; let i = index">
+    <td>{{artist.name}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteArtist(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

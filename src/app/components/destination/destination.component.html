@@ -1,0 +1,21 @@
+<p>Destination List works!</p>
+
+<input type="text" [(ngModel)]="newDestination" placeholder="Enter destination">
+<button class="btn btn-primary" (click)="addDestination()">Add Destination</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Destination</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let destination of destinationList; let i = index">
+    <td>{{destination.name}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteDestination(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

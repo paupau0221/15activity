@@ -1,0 +1,21 @@
+<p>Furniture List works!</p>
+
+<input type="text" [(ngModel)]="newFurniture" placeholder="Enter furniture item">
+<button class="btn btn-primary" (click)="addFurniture()">Add Furniture</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Furniture Item</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let furniture of furnitureList; let i = index">
+    <td>{{furniture.name}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteFurniture(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

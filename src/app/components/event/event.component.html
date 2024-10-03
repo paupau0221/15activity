@@ -1,0 +1,24 @@
+<p>Event List works!</p>
+
+<input type="text" [(ngModel)]="newEvent" placeholder="Enter event name">
+<input type="date" [(ngModel)]="newDate">
+<button class="btn btn-primary" (click)="addEvent()">Add Event</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Event Name</th>
+    <th>Date</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let event of eventList; let i = index">
+    <td>{{event.name}}</td>
+    <td>{{event.date | date: 'mediumDate'}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteEvent(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

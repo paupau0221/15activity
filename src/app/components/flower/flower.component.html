@@ -1,0 +1,23 @@
+<p>Flower List works!</p>
+
+<input type="text" [(ngModel)]="newFlower" placeholder="Enter flower name">
+<button class="btn btn-primary" (click)="addFlower()">Add Flower</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Flower</th>
+    <th>Quantity</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let flower of flowerList; let i = index">
+    <td>{{flower.name}}</td>
+    <td>{{flower.quantity}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteFlower(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

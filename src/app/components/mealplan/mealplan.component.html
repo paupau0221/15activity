@@ -1,0 +1,26 @@
+<p>Meal Plan List works!</p>
+
+<input type="text" [(ngModel)]="newMeal" placeholder="Enter meal name">
+<select [(ngModel)]="newDay">
+  <option *ngFor="let day of days" [value]="day">{{day}}</option>
+</select>
+<button class="btn btn-primary" (click)="addMeal()">Add Meal</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Meal Name</th>
+    <th>Day</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let meal of mealPlan; let i = index">
+    <td>{{meal.name}}</td>
+    <td>{{meal.day}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteMeal(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

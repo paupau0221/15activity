@@ -1,0 +1,23 @@
+<p>Stationery List works!</p>
+
+<input type="text" [(ngModel)]="newItem" placeholder="Enter stationery item">
+<button class="btn btn-primary" (click)="addItem()">Add Item</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Item</th>
+    <th>Quantity</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of stationeryList; let i = index">
+    <td>{{item.name}}</td>
+    <td>{{item.quantity}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteItem(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,9 @@
+<p>Employee List works!</p>
+<input type="text" [(ngModel)]="item"/>
+<button class="btn btn-primary" (click)="addItems()">Add Employee</button>
+<ul>
+  <li *ngFor="let employee of employeeList; let i = index">
+    {{employee}}
+    <button class="btn btn-danger" (click)="deleteEmployee(i)">Delete</button>
+  </li>
+</ul>

@@ -1,0 +1,21 @@
+<p>Video List works!</p>
+
+<input type="text" [(ngModel)]="newVideoTitle" placeholder="Enter video title">
+<button class="btn btn-primary" (click)="addVideo()">Add Video</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let video of videoList; let i = index">
+    <td>{{video.title}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteVideo(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

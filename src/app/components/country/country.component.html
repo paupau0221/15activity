@@ -1,0 +1,9 @@
+<p>Country List works!</p>
+<input type="text" [(ngModel)]="item"/>
+<button class="btn btn-primary" (click)="addItems()">Add Country</button>
+<ul>
+  <li *ngFor="let country of countryList; let i = index">
+    {{country}}
+    <button class="btn btn-danger" (click)="deleteCountry(i)">Delete</button>
+  </li>
+</ul>

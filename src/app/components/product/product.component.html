@@ -1,0 +1,9 @@
+<p>Product List works!</p>
+<input type="text" [(ngModel)]="item"/>
+<button class="btn btn-primary" (click)="addItems()">Add Product</button>
+<ul>
+  <li *ngFor="let product of productList; let i = index">
+    {{product}}
+    <button class="btn btn-danger" (click)="deleteProduct(i)">Delete</button>
+  </li>
+</ul>

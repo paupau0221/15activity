@@ -1,0 +1,26 @@
+<p>Framework List works!</p>
+
+<input type="text" [(ngModel)]="newFramework" placeholder="Enter framework name">
+<select [(ngModel)]="newType">
+  <option *ngFor="let type of frameworkTypes" [value]="type">{{type}}</option>
+</select>
+<button class="btn btn-primary" (click)="addFramework()">Add Framework</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Framework Name</th>
+    <th>Type</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let framework of frameworkList; let i = index">
+    <td>{{framework.name}}</td>
+    <td>{{framework.type}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteFramework(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

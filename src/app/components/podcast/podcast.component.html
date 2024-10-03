@@ -1,0 +1,21 @@
+<p>Podcast List works!</p>
+
+<input type="text" [(ngModel)]="newEpisodeTitle" placeholder="Enter episode title">
+<button class="btn btn-primary" (click)="addEpisode()">Add Episode</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Episode Title</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let episode of episodeList; let i = index">
+    <td>{{episode.title}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteEpisode(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

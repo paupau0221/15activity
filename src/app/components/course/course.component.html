@@ -1,0 +1,9 @@
+<p>Course List works!</p>
+<input type="text" [(ngModel)]="item"/>
+<button class="btn btn-primary" (click)="addItems()">Add Course</button>
+<ul>
+  <li *ngFor="let course of courseList; let i = index">
+    {{course}}
+    <button class="btn btn-danger" (click)="deleteCourse(i)">Delete</button>
+  </li>
+</ul>

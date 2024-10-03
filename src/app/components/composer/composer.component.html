@@ -1,0 +1,21 @@
+<p>Composer List works!</p>
+
+<input type="text" [(ngModel)]="newComposer" placeholder="Enter composer name">
+<button class="btn btn-primary" (click)="addComposer()">Add Composer</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Composer Name</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let composer of composerList; let i = index">
+    <td>{{composer.name}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteComposer(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

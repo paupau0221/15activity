@@ -1,0 +1,21 @@
+<p>Building List works!</p>
+
+<input type="text" [(ngModel)]="newBuilding" placeholder="Enter building name">
+<button class="btn btn-primary" (click)="addBuilding()">Add Building</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Building Name</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let building of buildingList; let i = index">
+    <td>{{building.name}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteBuilding(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

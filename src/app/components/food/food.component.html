@@ -1,0 +1,10 @@
+<p>Food Menu works!</p>
+<input type="text" [(ngModel)]="newItem" placeholder="Enter food item">
+<button class="btn btn-primary" (click)="addMenuItem()">Add Item</button>
+
+<ul>
+  <li *ngFor="let item of menuItems; let i = index">
+    {{item}}
+    <button class="btn btn-danger" (click)="deleteMenuItem(i)">Delete</button>
+  </li>
+</ul>

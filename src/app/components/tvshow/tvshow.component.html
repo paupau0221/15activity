@@ -1,0 +1,21 @@
+<p>TV Show List works!</p>
+
+<input type="text" [(ngModel)]="newShow" placeholder="Enter TV show name">
+<button class="btn btn-primary" (click)="addShow()">Add Show</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Show Name</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let show of showList; let i = index">
+    <td>{{show.name}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteShow(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

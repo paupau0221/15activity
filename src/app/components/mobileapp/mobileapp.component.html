@@ -1,0 +1,21 @@
+<p>Mobile App List works!</p>
+
+<input type="text" [(ngModel)]="newApp" placeholder="Enter app name">
+<button class="btn btn-primary" (click)="addApp()">Add App</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>App Name</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let app of appList; let i = index">
+    <td>{{app.name}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteApp(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

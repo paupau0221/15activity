@@ -1,0 +1,24 @@
+<p>Tour List for [Band Name] works!</p>
+
+<input type="text" [(ngModel)]="newCity" placeholder="Enter city">
+<input type="date" [(ngModel)]="newDate">
+<button class="btn btn-primary" (click)="addTourDate()">Add Tour Date</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>City</th>
+    <th>Date</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let tourDate of tourDates; let i = index">
+    <td>{{tourDate.city}}</td>
+    <td>{{tourDate.date | date: 'mediumDate'}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteTourDate(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

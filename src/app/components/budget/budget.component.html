@@ -1,0 +1,26 @@
+<p>Budget List works!</p>
+
+<input type="text" [(ngModel)]="newItem" placeholder="Enter budget item">
+<input type="number" [(ngModel)]="newCost" placeholder="Enter cost">
+<button class="btn btn-primary" (click)="addItem()">Add Item</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Item</th>
+    <th>Cost</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of budgetItems; let i = index">
+    <td>{{item.name}}</td>
+    <td>{{item.cost | currency}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteItem(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<p>Total Budget: {{getTotalCost() | currency}}</p>

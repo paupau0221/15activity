@@ -1,0 +1,9 @@
+<p>Movie List works!</p>
+<input type="text" [(ngModel)]="item"/>
+<button class="btn btn-primary" (click)="addItems()">Add Movie</button>
+<ul>
+  <li *ngFor="let movie of movieList; let i = index">
+    {{movie}}
+    <button class="btn btn-danger" (click)="deleteMovie(i)">Delete</button>
+  </li>
+</ul>

@@ -1,0 +1,25 @@
+<p>Exercise List works!</p>
+
+<input type="text" [(ngModel)]="newExercise" placeholder="Enter exercise name">
+<button class="btn btn-primary" (click)="addExercise()">Add Exercise</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Exercise Name</th>
+    <th>Sets</th>
+    <th>Reps</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let exercise of exerciseList; let i = index">
+    <td>{{exercise.name}}</td>
+    <td>{{exercise.sets}}</td>
+    <td>{{exercise.reps}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteExercise(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

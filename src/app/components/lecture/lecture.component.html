@@ -1,0 +1,23 @@
+<p>Lecture List works!</p>
+
+<input type="text" [(ngModel)]="newLecture" placeholder="Enter lecture topic">
+<button class="btn btn-primary" (click)="addLecture()">Add Lecture</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Topic</th>
+    <th>Date</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let lecture of lectureList; let i = index">
+    <td>{{lecture.topic}}</td>
+    <td>{{lecture.date | date: 'shortDate'}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteLecture(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

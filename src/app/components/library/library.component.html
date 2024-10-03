@@ -1,0 +1,21 @@
+<p>Library List works!</p>
+
+<input type="text" [(ngModel)]="newLibrary" placeholder="Enter library name">
+<button class="btn btn-primary" (click)="addLibrary()">Add Library</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Library Name</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let library of libraryList; let i = index">
+    <td>{{library.name}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteLibrary(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

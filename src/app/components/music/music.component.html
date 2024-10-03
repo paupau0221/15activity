@@ -1,0 +1,10 @@
+<p>Music Playlist works!</p>
+<input type="text" [(ngModel)]="newSong" placeholder="Enter song title">
+<button class="btn btn-primary" (click)="addSong()">Add Song</button>
+
+<ul>
+  <li *ngFor="let song of playlist; let i = index">
+    {{song}}
+    <button class="btn btn-danger" (click)="deleteSong(i)">Delete</button>
+  </li>
+</ul>

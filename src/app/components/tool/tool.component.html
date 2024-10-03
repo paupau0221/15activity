@@ -1,0 +1,9 @@
+<p>Tool List works!</p>
+<input type="text" [(ngModel)]="item"/>
+<button class="btn btn-primary" (click)="addItems()">Add Tool</button>
+<ul>
+  <li *ngFor="let tool of toolList; let i = index">
+    {{tool}}
+    <button class="btn btn-danger" (click)="deleteTool(i)">Delete</button>
+  </li>
+</ul>

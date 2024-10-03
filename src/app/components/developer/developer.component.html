@@ -1,0 +1,23 @@
+<p>Developer Tools List works!</p>
+
+<input type="text" [(ngModel)]="newTool" placeholder="Enter tool name">
+<button class="btn btn-primary" (click)="addTool()">Add Tool</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Tool Name</th>
+    <th>Category</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let tool of devToolsList; let i = index">
+    <td>{{tool.name}}</td>
+    <td>{{tool.category}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteTool(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

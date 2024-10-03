@@ -1,0 +1,9 @@
+<p>Subject List works!</p>
+<input type="text" [(ngModel)]="item"/>
+<button class="btn btn-primary" (click)="addItems()">Add Subject</button>
+<ul>
+  <li *ngFor="let subject of subjectList; let i = index">
+    {{subject}}
+    <button class="btn btn-danger" (click)="deleteSubject(i)">Delete</button>
+  </li>
+</ul>
