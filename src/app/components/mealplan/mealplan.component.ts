@@ -10,10 +10,10 @@ interface Meal {
   styleUrl: './mealplan.component.css'
 })
 export class MealplanComponent {
-  mealPlan: Meal[] = [
-    { name: "Breakfast Burrito", day: "Monday" },
-    { name: "Chicken Salad", day: "Tuesday" },
-    { name: "Pasta with Veggies", day: "Wednesday" }
+  mealPla: Meal[] = [
+    { name: "salmon", day: "Monday" },
+    { name: "Stir-fried beef", day: "Tuesday" },
+    { name: "meatballs", day: "Wednesday" }
   ];
   newMeal: string = '';
   newDay: string = '';
@@ -21,12 +21,12 @@ export class MealplanComponent {
 
   addMeal() {
     const newMeal: Meal = { name: this.newMeal, day: this.newDay };
-    this.mealPlan.push(newMeal);
+    this.mealPla.push(newMeal);
     this.newMeal = '';
     this.newDay = '';
   }
 
   deleteMeal(index: number) {
-    this.mealPlan.splice(index, 1);
+    this.mealPla.splice(index, 1);
   }
 }
