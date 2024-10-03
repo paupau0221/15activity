@@ -9,20 +9,20 @@ interface Painting {
   styleUrl: './painting.component.css'
 })
 export class PaintingComponent {
-  paintingList: Painting[] = [
+  paintingLis: Painting[] = [
+    { title: "Starry Night" },
     { title: "Mona Lisa" },
-    { title: "The Starry Night" },
-    { title: "Girl with a Pearl Earring" }
+    { title: "The Persistence of Memory" }
   ];
   newPainting: string = '';
 
   addPainting() {
     const newPainting: Painting = { title: this.newPainting };
-    this.paintingList.push(newPainting);
+    this.paintingLis.push(newPainting);
     this.newPainting = '';
   }
 
   deletePainting(index: number) {
-    this.paintingList.splice(index, 1);
+    this.paintingLis.splice(index, 1);
   }
 }

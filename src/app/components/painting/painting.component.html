@@ -11,7 +11,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let painting of paintingList; let i = index">
+  <tr *ngFor="let painting of paintingLis; let i = index">
     <td>{{painting.title}}</td>
     <td>
       <button class="btn btn-danger" (click)="deletePainting(i)">Delete</button>
