@@ -13,7 +13,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let tourDate of tourDates; let i = index">
+  <tr *ngFor="let tourDate of tourDate; let i = index">
     <td>{{tourDate.city}}</td>
     <td>{{tourDate.date | date: 'mediumDate'}}</td>
     <td>
