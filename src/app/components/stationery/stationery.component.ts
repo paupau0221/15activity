@@ -11,8 +11,7 @@ interface StationeryItem {
   styleUrl: './stationery.component.css'
 })
 export class StationeryComponent {
-  stationeryList: StationeryItem[] = [
-    { name: "Pens", quantity: 50 },
+  stationeryLis: StationeryItem[] = [
     { name: "Paper", quantity: 100 },
     { name: "Staplers", quantity: 10 }
   ];
@@ -21,12 +20,12 @@ export class StationeryComponent {
 
   addItem() {
     const newItem: StationeryItem = { name: this.newItem, quantity: this.newQuantity };
-    this.stationeryList.push(newItem);
+    this.stationeryLis.push(newItem);
     this.newItem = '';
     this.newQuantity = 0;
   }
 
   deleteItem(index: number) {
-    this.stationeryList.splice(index, 1);
+    this.stationeryLis.splice(index, 1);
   }
 }
