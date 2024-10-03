@@ -11,7 +11,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let library of libraryList; let i = index">
+  <tr *ngFor="let library of libraryLis; let i = index">
     <td>{{library.name}}</td>
     <td>
       <button class="btn btn-danger" (click)="deleteLibrary(i)">Delete</button>

@@ -8,20 +8,20 @@ interface Library {
   styleUrl: './library.component.css'
 })
 export class LibraryComponent {
-  libraryList: Library[] = [
-    { name: "lodash" },
-    { name: "moment.js" },
-    { name: "axios" }
+  libraryLis: Library[] = [
+    { name: "Library of Congress" },
+    { name: "British Library" },
+    { name: "Bibliothèque Nationale de France" }
   ];
   newLibrary: string = '';
 
   addLibrary() {
     const newLibrary: Library = { name: this.newLibrary };
-    this.libraryList.push(newLibrary);
+    this.libraryLis.push(newLibrary);
     this.newLibrary = '';
   }
 
   deleteLibrary(index: number) {
-    this.libraryList.splice(index, 1);
+    this.libraryLis.splice(index, 1);
   }
 }
