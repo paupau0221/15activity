@@ -11,8 +11,7 @@ interface Exercise {
   styleUrl: './exercise.component.css'
 })
 export class ExerciseComponent {
-  exerciseList: Exercise[] = [
-    { name: "Push-ups", sets: 3, reps: 10 },
+  exerciseLis: Exercise[] = [
     { name: "Squats", sets: 3, reps: 12 },
     { name: "Pull-ups", sets: 3, reps: 8 }
   ];
@@ -22,13 +21,13 @@ export class ExerciseComponent {
 
   addExercise() {
     const newExercise: Exercise = { name: this.newExercise, sets: this.newSets, reps: this.newReps };
-    this.exerciseList.push(newExercise);
+    this.exerciseLis.push(newExercise);
     this.newExercise = '';
     this.newSets = 0;
     this.newReps = 0;
   }
 
   deleteExercise(index: number) {
-    this.exerciseList.splice(index, 1);
+    this.exerciseLis.splice(index, 1);
   }
 }
