@@ -8,20 +8,20 @@ interface App {
   styleUrl: './mobileapp.component.css'
 })
 export class MobileappComponent {
-  appList: App[] = [
-    { name: "Instagram" },
-    { name: "WhatsApp" },
-    { name: "YouTube" }
+  appLis: App[] = [
+    { name: "Facebook" },
+    { name: "Twitter" },
+    { name: "Instagram" }
   ];
   newApp: string = '';
 
   addApp() {
     const newApp: App = { name: this.newApp };
-    this.appList.push(newApp);
+    this.appLis.push(newApp);
     this.newApp = '';
   }
 
   deleteApp(index: number) {
-    this.appList.splice(index, 1);
+    this.appLis.splice(index, 1);
   }
 }

@@ -11,7 +11,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let app of appList; let i = index">
+  <tr *ngFor="let app of appLis; let i = index">
     <td>{{app.name}}</td>
     <td>
       <button class="btn btn-danger" (click)="deleteApp(i)">Delete</button>
