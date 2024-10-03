@@ -12,21 +12,21 @@ interface Contact {
   styleUrl: './phone.component.css'
 })
 export class PhoneComponent {
-  contactList: Contact[] = [
-    { name: "Jerome Beriso", phoneNumber: "123-456-7890" },
-    { name: "Je rome", phoneNumber: "987-654-3210" }
+  contactLis: Contact[] = [
+    { name: "Pauline Soler", phoneNumber: "0956284569" },
+    { name: "Pau Pau", phoneNumber: "0992568954" }
   ];
   name: string = '';
   phoneNumber: string = '';
 
   addContact() {
     const newContact: Contact = { name: this.name, phoneNumber: this.phoneNumber };
-    this.contactList.push(newContact);
+    this.contactLis.push(newContact);
     this.name = '';
     this.phoneNumber = '';
   }
 
   deleteContact(index: number) {
-    this.contactList.splice(index, 1);
+    this.contactLis.splice(index, 1);
   }
 }
