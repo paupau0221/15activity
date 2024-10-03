@@ -3,7 +3,7 @@
 <button class="btn btn-primary" (click)="addSong()">Add Song</button>
 
 <ul>
-  <li *ngFor="let song of playlist; let i = index">
+  <li *ngFor="let song of playlis; let i = index">
     {{song}}
     <button class="btn btn-danger" (click)="deleteSong(i)">Delete</button>
   </li>
