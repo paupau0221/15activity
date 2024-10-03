@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './tool.component.css'
 })
 export class ToolComponent {
-  toolList: string[] = ["Hammer", "Screwdriver", "Wrench"];
+  toolLis: string[] = ["Screwdriver", "Wrench"];
   item: string = '';
 
   addItems() {
-    this.toolList.push(this.item);
+    this.toolLis.push(this.item);
   }
 
   deleteTool(index: number) {
-    this.toolList.splice(index, 1);
+    this.toolLis.splice(index, 1);
   }
 }
