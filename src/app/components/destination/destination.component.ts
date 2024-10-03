@@ -9,20 +9,20 @@ interface Destination {
   styleUrl: './destination.component.css'
 })
 export class DestinationComponent {
-  destinationList: Destination[] = [
+  destinationLis: Destination[] = [
     { name: "Paris" },
-    { name: "Rome" },
-    { name: "Tokyo" }
+    { name: "Kyoto" },
+    { name: "Cape Town" }
   ];
   newDestination: string = '';
 
   addDestination() {
     const newDestination: Destination = { name: this.newDestination };
-    this.destinationList.push(newDestination);
+    this.destinationLis.push(newDestination);
     this.newDestination = '';
   }
 
   deleteDestination(index: number) {
-    this.destinationList.splice(index, 1);
+    this.destinationLis.splice(index, 1);
   }
 }
