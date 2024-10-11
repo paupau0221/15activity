@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 interface Video {
   title: string;
 }
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-video',
   templateUrl: './video.component.html',

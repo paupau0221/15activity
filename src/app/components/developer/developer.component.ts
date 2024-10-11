@@ -3,6 +3,10 @@ interface DevTool {
   name: string;
   category: string;
 }
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-developer',
   templateUrl: './developer.component.html',

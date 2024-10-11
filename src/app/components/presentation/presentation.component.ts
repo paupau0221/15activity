@@ -3,6 +3,10 @@ import { Component } from '@angular/core';
 interface PresentationTopic {
   name: string;
 }
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-presentation',
   templateUrl: './presentation.component.html',

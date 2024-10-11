@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import {FormsModule} from "@angular/forms";
 
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-grocery',
   templateUrl: './grocery.component.html',

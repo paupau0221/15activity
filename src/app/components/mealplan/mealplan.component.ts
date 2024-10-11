@@ -4,6 +4,10 @@ interface Meal {
   name: string;
   day: string;
 }
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-mealplan',
   templateUrl: './mealplan.component.html',

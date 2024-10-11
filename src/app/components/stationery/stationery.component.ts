@@ -5,6 +5,10 @@ interface StationeryItem {
   quantity: number;
 }
 
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-stationery',
   templateUrl: './stationery.component.html',

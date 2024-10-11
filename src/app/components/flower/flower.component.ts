@@ -3,6 +3,10 @@ interface Flower {
   name: string;
   quantity: number;
 }
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-flower',
   templateUrl: './flower.component.html',

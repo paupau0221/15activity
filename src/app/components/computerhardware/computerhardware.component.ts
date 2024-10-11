@@ -4,6 +4,11 @@ interface HardwareComponent {
   name: string;
   quantity: number;
 }
+
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-computerhardware',
   templateUrl: './computerhardware.component.html',

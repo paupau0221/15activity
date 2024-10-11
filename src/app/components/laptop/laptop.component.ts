@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 interface Laptop {
   model: string;
 }
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-laptop',
   templateUrl: './laptop.component.html',

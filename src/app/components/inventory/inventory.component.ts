@@ -3,6 +3,10 @@ interface InventoryItem {
   name: string;
   quantity: number;
 }
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-inventory',
   templateUrl: './inventory.component.html',

@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 interface Artist {
   name: string;
 }
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-artist',
   templateUrl: './artist.component.html',

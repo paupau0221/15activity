@@ -5,6 +5,10 @@ interface Exercise {
   sets: number;
   reps: number;
 }
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-exercise',
   templateUrl: './exercise.component.html',

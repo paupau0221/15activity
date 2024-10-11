@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 interface Library {
   name: string;
 }
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-library',
   templateUrl: './library.component.html',

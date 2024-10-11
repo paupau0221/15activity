@@ -3,6 +3,10 @@ interface Painting {
   title: string;
 }
 
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-painting',
   templateUrl: './painting.component.html',

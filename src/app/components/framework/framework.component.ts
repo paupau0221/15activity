@@ -3,6 +3,10 @@ interface Framework {
   name: string;
   type: string;
 }
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-framework',
   templateUrl: './framework.component.html',

@@ -3,6 +3,10 @@ interface BudgetItem {
   name: string;
   cost: number;
 }
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-budget',
   templateUrl: './budget.component.html',

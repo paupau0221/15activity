@@ -3,6 +3,11 @@ import { Component } from '@angular/core';
 interface Composer {
   name: string;
 }
+
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-composer',
   templateUrl: './composer.component.html',

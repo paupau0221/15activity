@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 interface Building {
   name: string;
 }
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-building',
   templateUrl: './building.component.html',

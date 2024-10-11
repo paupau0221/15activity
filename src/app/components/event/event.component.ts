@@ -3,6 +3,10 @@ interface Event {
   name: string;
   date: Date;
 }
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
